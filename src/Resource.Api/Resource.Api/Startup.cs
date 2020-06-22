@@ -27,7 +27,7 @@ namespace Resource.Api
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;                
             }).AddJwtBearer(o =>
             {
-                o.Authority = "http://localhost:5000";
+                o.Authority = "https://localhost:44340";
                 o.Audience = "resourceapi";
                 o.RequireHttpsMetadata = false;
             });
