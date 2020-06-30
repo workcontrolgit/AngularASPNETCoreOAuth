@@ -38,6 +38,12 @@ namespace AuthServer
                 .AddEntityFrameworkStores<AppIdentityDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.Configure<IISOptions>(iis =>
+            {
+                iis.AuthenticationDisplayName = "Windows";
+                iis.AutomaticAuthentication = true;
+            });
+
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 // this adds the operational data from DB (codes, tokens, consents)
