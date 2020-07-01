@@ -1,6 +1,12 @@
 # OauthClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
+This is a prototype of Angular app client requesting JWT from the Security Token Service (STS) server.  The  STS server is based on .NET Identity Server 4 which is an OpenID Connect (OIDC) provider.  The JWT consists of Identity Token and Access Token.  The supported technology stack is the Angular 9 and ASP.NET CORE 3.1
+#### Identity Token
+An identity token represents the outcome of an authentication process. It contains at a bare minimum an identifier for the user (called the sub aka subject claim) and information about how and when the user authenticated. It can contain additional identity data.
+
+#### Access Token
+An access token allows access to an API resource. Clients request access tokens and forward them to the API. Access tokens contain information about the client and the user (if present). APIs use that information to authorize access to their data.
+
 
 ## Development server
 
